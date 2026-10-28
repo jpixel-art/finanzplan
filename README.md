@@ -6,15 +6,15 @@ Dieses Repository dient nur dem Download. Es enthält die fertigen Anwendungen f
 
 ## Download
 
-Aktuelle Version: **0.1.1** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
+Aktuelle Version: **0.1.2** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
 
 | System | Datei | Größe |
 |---|---|---|
-| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.1/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
-| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.1/Finanzplan-macOS-Apple-Silicon.dmg) | 5,7 MB |
-| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.1/Finanzplan-macOS-Intel.dmg) | 6,0 MB |
-| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.1/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
-| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.1/Finanzplan-Linux-x64.deb) | 6,0 MB |
+| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
+| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-macOS-Apple-Silicon.dmg) | 5,7 MB |
+| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-macOS-Intel.dmg) | 6,0 MB |
+| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
+| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Linux-x64.deb) | 6,0 MB |
 
 Welcher Mac? Im Apple-Menü › *Über diesen Mac*: Steht dort „Chip Apple M…“, nimm Apple Silicon, bei „Prozessor Intel…“ die Intel-Version.
 
@@ -60,8 +60,9 @@ Beim ersten Start wählst du Region und Land. Optional setzt du ein Passwort: Da
 
 - Die App braucht keine Administratorrechte. Nur die Installation des `.deb`-Pakets läuft über `sudo`.
 - Sie liest und schreibt nur ihren eigenen Datenordner und Dateien, die du selbst in einem Öffnen- oder Speichern-Dialog auswählst (z. B. Kontoauszüge, Exporte, Backups).
-- Ohne deine Zustimmung baut die App keine Verbindung ins Internet auf. Nur zwei Funktionen tun das, und beide musst du ausdrücklich einschalten:
+- Ohne deine Zustimmung baut die App keine Verbindung ins Internet auf. Nur drei Funktionen tun das, und alle musst du ausdrücklich einschalten:
   - **Online-Kurse:** Wertpapierkennungen (ISIN bzw. Börsenkürzel) gehen an Yahoo Finance.
+  - **Online-Händlersuche:** Für unbekannte Geschäfte gehen nur deren Name und Ort an OpenStreetMap (keine Beträge, Daten oder Kontonummern).
   - **Synchronisation** mit einem eigenen Server: Die Daten werden vorher Ende-zu-Ende-verschlüsselt.
 
 ## Deine Daten
@@ -76,7 +77,7 @@ Backups liegen im Unterordner `backups`. Gespeichert wird automatisch, auch dire
 
 **Update:** neue Version herunterladen und über die alte installieren bzw. die alte AppImage-Datei ersetzen. Deine Daten bleiben erhalten. Beim Deinstallieren bleiben sie ebenfalls erhalten, solange du den Datenordner nicht selbst löschst.
 
-## Teststatus von Version 0.1.1
+## Teststatus von Version 0.1.2
 
 Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung auf frisch eingerichteten Systemen installiert und gestartet:
 
@@ -90,6 +91,13 @@ Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung 
 
 Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchgeklickt. Die App ist auf allen Systemen dieselbe.
 
+## Neu in 0.1.2
+
+- **Bessere automatische Kategorien:** erkennt Buchungstexte vieler Banken und Sprachen (z. B. „Kartenbezahlung“, „Card payment“, „PAIEMENT CB“), andere Schreibweisen bekannter Händler und Einzahlungen auf deinen eigenen Namen (dann eine Umbuchung, keine Einnahme). Jede automatische Kategorie zeigt Grund und Sicherheit; Unklares bleibt zur Prüfung, statt geraten zu werden. Buchungen ohne Kategorie werden nach dem Update einmal neu geprüft.
+- **PDF-Import:** mehrseitige Auszüge, Beträge wie „1250,00“, niederländische und englische Formate; verständliche Meldungen bei gescannten oder passwortgeschützten PDFs; Zusammenfassung nach dem Import.
+- **Optional:** Online-Händlersuche über OpenStreetMap (standardmäßig aus).
+- Sicherheit: CSV-Exporte sind gegen Formeln in fremden Buchungstexten geschützt.
+
 ## Bekannte Einschränkungen
 
 - Keine Herstellersignatur: Warnung beim ersten Start unter Windows und macOS (siehe oben).
@@ -100,10 +108,10 @@ Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchg
 
 | Datei | SHA-256 |
 |---|---|
-| Finanzplan-Windows-x64.exe | `e1731aaa995fd2fdb70a1597bb1a76ee34dceb13b85765ddb47b5df7efec153b` |
-| Finanzplan-macOS-Apple-Silicon.dmg | `bb76acc32ec61e7789a2e6e483e36210617ea7015ef45f0a5ad10f9288c27767` |
-| Finanzplan-macOS-Intel.dmg | `fafa28a178d03b02fdc0fa8c5b0d15f1b834e2c47bff9df182bbd4e0656bcd34` |
-| Finanzplan-Linux-x64.AppImage | `53d441ed876b0c60931785d91673b5561a721ff56e7dda821711c73e2db8baf4` |
-| Finanzplan-Linux-x64.deb | `84da3983830a92c421cc4f24b333cbee1cbea0236f117cb7957e76ffbaead4aa` |
+| Finanzplan-Windows-x64.exe | `0917aaa8edc22b9c453179ddd931483bb6b3eb2f0ea23612afd8c306207acf69` |
+| Finanzplan-macOS-Apple-Silicon.dmg | `4dda74e92ab0404a9c5ff1bed40a5288f6e832199a035cdbe1d6b504ddb387a1` |
+| Finanzplan-macOS-Intel.dmg | `a15da3e3a7b02760838a5df2024056794585b793db2b37704cdf993c360ac369` |
+| Finanzplan-Linux-x64.AppImage | `2a3eb72fb41ab608a8a6465b9ce34f0c09d65219d097ed4a984de66e28f0a789` |
+| Finanzplan-Linux-x64.deb | `7d0f4e0de2ae329cdf52f018f7bfc2f99955e63b3bfff29e06bb8205b4ea890c` |
 
 Prüfen unter Windows: `Get-FileHash <Datei>` (PowerShell) · macOS: `shasum -a 256 <Datei>` · Linux: `sha256sum <Datei>`
