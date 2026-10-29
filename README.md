@@ -6,15 +6,15 @@ Dieses Repository dient nur dem Download. Es enthält die fertigen Anwendungen f
 
 ## Download
 
-Aktuelle Version: **0.1.2** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
+Aktuelle Version: **0.1.3** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
 
 | System | Datei | Größe |
 |---|---|---|
-| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
-| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-macOS-Apple-Silicon.dmg) | 5,7 MB |
-| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-macOS-Intel.dmg) | 6,0 MB |
-| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
-| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.2/Finanzplan-Linux-x64.deb) | 6,0 MB |
+| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
+| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Apple-Silicon.dmg) | 5,7 MB |
+| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Intel.dmg) | 6,0 MB |
+| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
+| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Linux-x64.deb) | 6,0 MB |
 
 Welcher Mac? Im Apple-Menü › *Über diesen Mac*: Steht dort „Chip Apple M…“, nimm Apple Silicon, bei „Prozessor Intel…“ die Intel-Version.
 
@@ -77,7 +77,7 @@ Backups liegen im Unterordner `backups`. Gespeichert wird automatisch, auch dire
 
 **Update:** neue Version herunterladen und über die alte installieren bzw. die alte AppImage-Datei ersetzen. Deine Daten bleiben erhalten. Beim Deinstallieren bleiben sie ebenfalls erhalten, solange du den Datenordner nicht selbst löschst.
 
-## Teststatus von Version 0.1.2
+## Teststatus von Version 0.1.3
 
 Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung auf frisch eingerichteten Systemen installiert und gestartet:
 
@@ -90,6 +90,12 @@ Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung 
 | Linux .deb | Installation per `apt` unter Ubuntu 22.04, Start wie beim AppImage |
 
 Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchgeklickt. Die App ist auf allen Systemen dieselbe.
+
+## Neu in 0.1.3
+
+- **Private Überweisungen** an und von Freunden und Familie werden automatisch zugeordnet – auch wenn die Bank „Überweisung an/von …“ in das Empfängerfeld schreibt. Überweisungen an dich selbst, aufs Tagesgeld oder in Unterkonten (z. B. Revolut-Pockets, N26-Spaces) zählen weiterhin als Umbuchung, nicht als Ausgabe.
+- **Bonuspunkte:** neue Seite für Punkte- und Meilenprogramme wie Revolut RevPoints, PAYBACK oder Miles & More – Stand, Verlauf, Einlösungen und geschätzter Gegenwert, getrennt von Einnahmen und Ausgaben. Die Punkte trägst du selbst ein (Banken liefern sie nicht im Kontoauszug).
+- **PDF-Import:** weitere Spaltenformate von Neobanken (z. B. „Money out / Money in“).
 
 ## Neu in 0.1.2
 
@@ -108,7 +114,7 @@ Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchg
 
 | Datei | SHA-256 |
 |---|---|
-| Finanzplan-Windows-x64.exe | `0917aaa8edc22b9c453179ddd931483bb6b3eb2f0ea23612afd8c306207acf69` |
+| Finanzplan-Windows-x64.exe | `ba36a8b034ea8c854e7f71dc994a172395462f52676598986c900680f61bae02` |
 | Finanzplan-macOS-Apple-Silicon.dmg | `4dda74e92ab0404a9c5ff1bed40a5288f6e832199a035cdbe1d6b504ddb387a1` |
 | Finanzplan-macOS-Intel.dmg | `a15da3e3a7b02760838a5df2024056794585b793db2b37704cdf993c360ac369` |
 | Finanzplan-Linux-x64.AppImage | `2a3eb72fb41ab608a8a6465b9ce34f0c09d65219d097ed4a984de66e28f0a789` |
