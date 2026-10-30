@@ -6,15 +6,17 @@ Dieses Repository dient nur dem Download. Es enthält die fertigen Anwendungen f
 
 ## Download
 
-Aktuelle Version: **0.1.3** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
+Aktuelle Version: **0.1.4** für Windows und Linux, **0.1.3** für macOS · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
+
+Die macOS-Dateien von 0.1.4 folgen, sobald sie gebaut und getestet sind. Bis dahin ist 0.1.3 die aktuelle macOS-Version; sie unterscheidet sich nur durch die strengere Prüfung neuer Passwörter (siehe „Neu in 0.1.4“).
 
 | System | Datei | Größe |
 |---|---|---|
-| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
-| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Apple-Silicon.dmg) | 5,7 MB |
-| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Intel.dmg) | 6,0 MB |
-| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
-| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-Linux-x64.deb) | 6,0 MB |
+| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
+| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Apple-Silicon.dmg) (Version 0.1.3) | 5,7 MB |
+| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Intel.dmg) (Version 0.1.3) | 6,0 MB |
+| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
+| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Linux-x64.deb) | 6,0 MB |
 
 Welcher Mac? Im Apple-Menü › *Über diesen Mac*: Steht dort „Chip Apple M…“, nimm Apple Silicon, bei „Prozessor Intel…“ die Intel-Version.
 
@@ -77,19 +79,24 @@ Backups liegen im Unterordner `backups`. Gespeichert wird automatisch, auch dire
 
 **Update:** neue Version herunterladen und über die alte installieren bzw. die alte AppImage-Datei ersetzen. Deine Daten bleiben erhalten. Beim Deinstallieren bleiben sie ebenfalls erhalten, solange du den Datenordner nicht selbst löschst.
 
-## Teststatus von Version 0.1.3
+## Teststatus von Version 0.1.4
 
 Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung auf frisch eingerichteten Systemen installiert und gestartet:
 
 | Datei | Geprüft |
 |---|---|
 | Windows | Installation, Start, Ersteinrichtung, Demo-Daten, Backup, Schließen und Neustart mit erhaltenen Daten, Verschlüsselung, Sperren und Entsperren |
-| macOS Apple Silicon | Installation aus der DMG, Signaturprüfung, zweimaliger Start, Datenbank angelegt und nach Neustart wieder geöffnet |
-| macOS Intel | wie Apple Silicon, aber unter Rosetta 2 auf einem Apple-Silicon-Mac. **Nicht auf einem echten Intel-Mac getestet.** |
+| macOS Apple Silicon (0.1.3) | Installation aus der DMG, Signaturprüfung, zweimaliger Start, Datenbank angelegt und nach Neustart wieder geöffnet |
+| macOS Intel (0.1.3) | wie Apple Silicon, aber unter Rosetta 2 auf einem Apple-Silicon-Mac. **Nicht auf einem echten Intel-Mac getestet.** |
 | Linux AppImage | Start unter Ubuntu 22.04 (virtuelle Anzeige), zweimal, Datenbank angelegt und wieder geöffnet |
 | Linux .deb | Installation per `apt` unter Ubuntu 22.04, Start wie beim AppImage |
 
 Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchgeklickt. Die App ist auf allen Systemen dieselbe.
+
+## Neu in 0.1.4
+
+- **Sicherere Passwörter:** Neue Passwörter für die verschlüsselte Datenbank dürfen nicht mehr leicht zu erraten sein (z. B. „passwort123“, „1234567890“, „abcdefghij“). Am besten mehrere zufällige Wörter. Bestehende Passwörter gelten weiter.
+- **Synchronisations-Server:** Wer einen eigenen Server betreibt, sieht fehlgeschlagene Anmeldungen und Sperren jetzt im Protokoll – ohne IP-Adressen oder Kontodaten.
 
 ## Neu in 0.1.3
 
@@ -114,10 +121,10 @@ Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchg
 
 | Datei | SHA-256 |
 |---|---|
-| Finanzplan-Windows-x64.exe | `ba36a8b034ea8c854e7f71dc994a172395462f52676598986c900680f61bae02` |
-| Finanzplan-macOS-Apple-Silicon.dmg | `4dda74e92ab0404a9c5ff1bed40a5288f6e832199a035cdbe1d6b504ddb387a1` |
-| Finanzplan-macOS-Intel.dmg | `a15da3e3a7b02760838a5df2024056794585b793db2b37704cdf993c360ac369` |
-| Finanzplan-Linux-x64.AppImage | `2a3eb72fb41ab608a8a6465b9ce34f0c09d65219d097ed4a984de66e28f0a789` |
-| Finanzplan-Linux-x64.deb | `7d0f4e0de2ae329cdf52f018f7bfc2f99955e63b3bfff29e06bb8205b4ea890c` |
+| Finanzplan-Windows-x64.exe | `01a1bef184b36ad353322c2b97f321eed19cf18da09c7a29e79e8bcd2d81a68e` |
+| Finanzplan-macOS-Apple-Silicon.dmg (0.1.3) | `4dda74e92ab0404a9c5ff1bed40a5288f6e832199a035cdbe1d6b504ddb387a1` |
+| Finanzplan-macOS-Intel.dmg (0.1.3) | `a15da3e3a7b02760838a5df2024056794585b793db2b37704cdf993c360ac369` |
+| Finanzplan-Linux-x64.AppImage | `494fec0c49e6fb1ca4f7a4f877c13ad497be65d4568b6645182fb922b45e77a0` |
+| Finanzplan-Linux-x64.deb | `b2bd271031060ae14ee80e2c8d0f596594c7d46b6ce335ac1b3a73e82fd06ab5` |
 
 Prüfen unter Windows: `Get-FileHash <Datei>` (PowerShell) · macOS: `shasum -a 256 <Datei>` · Linux: `sha256sum <Datei>`
