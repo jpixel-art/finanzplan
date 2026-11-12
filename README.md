@@ -6,17 +6,15 @@ Dieses Repository dient nur dem Download. Es enthält die fertigen Anwendungen f
 
 ## Download
 
-Aktuelle Version: **0.1.4** für Windows und Linux, **0.1.3** für macOS · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
-
-Die macOS-Dateien von 0.1.4 folgen, sobald sie gebaut und getestet sind. Bis dahin ist 0.1.3 die aktuelle macOS-Version; sie unterscheidet sich nur durch die strengere Prüfung neuer Passwörter (siehe „Neu in 0.1.4“).
+Aktuelle Version: **0.2.0** · [alle Versionen](https://github.com/jpixel-art/finanzplan/releases)
 
 | System | Datei | Größe |
 |---|---|---|
-| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,2 MB |
-| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Apple-Silicon.dmg) (Version 0.1.3) | 5,7 MB |
-| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.3/Finanzplan-macOS-Intel.dmg) (Version 0.1.3) | 6,0 MB |
-| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Linux-x64.AppImage) | 80,8 MB |
-| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.1.4/Finanzplan-Linux-x64.deb) | 6,0 MB |
+| Windows 10 und 11 (64 Bit) | [Finanzplan-Windows-x64.exe](https://github.com/jpixel-art/finanzplan/releases/download/v0.2.0/Finanzplan-Windows-x64.exe) (Installationsprogramm) | 5,3 MB |
+| macOS 10.15 oder neuer, Apple Silicon (M1 und neuer) | [Finanzplan-macOS-Apple-Silicon.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.2.0/Finanzplan-macOS-Apple-Silicon.dmg) | 5,8 MB |
+| macOS 10.15 oder neuer, Intel | [Finanzplan-macOS-Intel.dmg](https://github.com/jpixel-art/finanzplan/releases/download/v0.2.0/Finanzplan-macOS-Intel.dmg) | 6,1 MB |
+| Linux x64, alle Distributionen | [Finanzplan-Linux-x64.AppImage](https://github.com/jpixel-art/finanzplan/releases/download/v0.2.0/Finanzplan-Linux-x64.AppImage) | 80,9 MB |
+| Linux x64, Ubuntu, Debian, Linux Mint | [Finanzplan-Linux-x64.deb](https://github.com/jpixel-art/finanzplan/releases/download/v0.2.0/Finanzplan-Linux-x64.deb) | 6,0 MB |
 
 Welcher Mac? Im Apple-Menü › *Über diesen Mac*: Steht dort „Chip Apple M…“, nimm Apple Silicon, bei „Prozessor Intel…“ die Intel-Version.
 
@@ -62,9 +60,10 @@ Beim ersten Start wählst du Region und Land. Optional setzt du ein Passwort: Da
 
 - Die App braucht keine Administratorrechte. Nur die Installation des `.deb`-Pakets läuft über `sudo`.
 - Sie liest und schreibt nur ihren eigenen Datenordner und Dateien, die du selbst in einem Öffnen- oder Speichern-Dialog auswählst (z. B. Kontoauszüge, Exporte, Backups).
-- Ohne deine Zustimmung baut die App keine Verbindung ins Internet auf. Nur drei Funktionen tun das, und alle musst du ausdrücklich einschalten:
+- Ohne deine Zustimmung baut die App keine Verbindung ins Internet auf. Nur vier Funktionen tun das, und alle musst du ausdrücklich einschalten:
   - **Online-Kurse:** Wertpapierkennungen (ISIN bzw. Börsenkürzel) gehen an Yahoo Finance.
   - **Online-Händlersuche:** Für unbekannte Geschäfte gehen nur deren Name und Ort an OpenStreetMap (keine Beträge, Daten oder Kontonummern).
+  - **Karte:** Für den Kartenhintergrund werden Kartenbilder von OpenStreetMap geladen. Der Server sieht die angesehenen Kartenausschnitte, aber keine Buchungen, Beträge oder Namen.
   - **Synchronisation** mit einem eigenen Server: Die Daten werden vorher Ende-zu-Ende-verschlüsselt.
 
 ## Deine Daten
@@ -79,19 +78,25 @@ Backups liegen im Unterordner `backups`. Gespeichert wird automatisch, auch dire
 
 **Update:** neue Version herunterladen und über die alte installieren bzw. die alte AppImage-Datei ersetzen. Deine Daten bleiben erhalten. Beim Deinstallieren bleiben sie ebenfalls erhalten, solange du den Datenordner nicht selbst löschst.
 
-## Teststatus von Version 0.1.4
+## Teststatus von Version 0.2.0
 
 Alle Dateien werden automatisch auf GitHub gebaut und vor der Veröffentlichung auf frisch eingerichteten Systemen installiert und gestartet:
 
 | Datei | Geprüft |
 |---|---|
 | Windows | Installation, Start, Ersteinrichtung, Demo-Daten, Backup, Schließen und Neustart mit erhaltenen Daten, Verschlüsselung, Sperren und Entsperren |
-| macOS Apple Silicon (0.1.3) | Installation aus der DMG, Signaturprüfung, zweimaliger Start, Datenbank angelegt und nach Neustart wieder geöffnet |
-| macOS Intel (0.1.3) | wie Apple Silicon, aber unter Rosetta 2 auf einem Apple-Silicon-Mac. **Nicht auf einem echten Intel-Mac getestet.** |
+| macOS Apple Silicon | Installation aus der DMG, Signaturprüfung, zweimaliger Start, Datenbank angelegt und nach Neustart wieder geöffnet |
+| macOS Intel | wie Apple Silicon, aber unter Rosetta 2 auf einem Apple-Silicon-Mac. **Nicht auf einem echten Intel-Mac getestet.** |
 | Linux AppImage | Start unter Ubuntu 22.04 (virtuelle Anzeige), zweimal, Datenbank angelegt und wieder geöffnet |
 | Linux .deb | Installation per `apt` unter Ubuntu 22.04, Start wie beim AppImage |
 
-Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchgeklickt. Die App ist auf allen Systemen dieselbe.
+Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchgeklickt. Die App ist auf allen Systemen dieselbe. Online-Kurse und die Karte wurden mit nachgebildeten Antworten getestet, nicht gegen die echten Dienste.
+
+## Neu in 0.2.0
+
+- **Depot:** Ein Klick auf eine Position zeigt den Kursverlauf mit Markern für jeden Kauf und Verkauf, dem Durchschnittskaufkurs und der Kaufhistorie. Mit eingeschalteten Online-Kursen von 1 Tag bis Gesamt, sonst aus den gespeicherten Kursen. Neu ist außerdem die Entwicklung des Depotwerts gegenüber dem eingesetzten Geld. Online-Kurse können je nach Börse verzögert sein; die Abrufzeit steht dabei.
+- **Karte:** zeigt, wo du Geld ausgegeben hast – für Geschäfte, deren Standort die Online-Händlersuche eindeutig findet. Bei mehreren Treffern wählst du den richtigen Ort. Händlersuche und Kartenbilder sind getrennt einzuschalten und standardmäßig aus.
+- **Neues Erscheinungsbild:** durchscheinende Flächen, weichere Formen, sanfte Übergänge und animierte Kennzahlen, hell und dunkel. Die Systemeinstellungen „Bewegung reduzieren“ und „Transparenz reduzieren“ werden beachtet.
 
 ## Neu in 0.1.4
 
@@ -121,10 +126,10 @@ Bei macOS und Linux wurde die Bedienung der Oberfläche nicht automatisch durchg
 
 | Datei | SHA-256 |
 |---|---|
-| Finanzplan-Windows-x64.exe | `01a1bef184b36ad353322c2b97f321eed19cf18da09c7a29e79e8bcd2d81a68e` |
-| Finanzplan-macOS-Apple-Silicon.dmg (0.1.3) | `4dda74e92ab0404a9c5ff1bed40a5288f6e832199a035cdbe1d6b504ddb387a1` |
-| Finanzplan-macOS-Intel.dmg (0.1.3) | `a15da3e3a7b02760838a5df2024056794585b793db2b37704cdf993c360ac369` |
-| Finanzplan-Linux-x64.AppImage | `494fec0c49e6fb1ca4f7a4f877c13ad497be65d4568b6645182fb922b45e77a0` |
-| Finanzplan-Linux-x64.deb | `b2bd271031060ae14ee80e2c8d0f596594c7d46b6ce335ac1b3a73e82fd06ab5` |
+| Finanzplan-Windows-x64.exe | `871db2b2b45a3955a7189a875f6a9a235f43882bf6f896ed0329955c97187c05` |
+| Finanzplan-macOS-Apple-Silicon.dmg | `a99c70fca34c4fd6b3c675270c1b9ec7ae765546d7a675890c1c78b75e253319` |
+| Finanzplan-macOS-Intel.dmg | `f4731e99977d16244733023be8fbbe0e7c32b814e0ad186c0ad86bd92cb46bfe` |
+| Finanzplan-Linux-x64.AppImage | `e3106db04bddb44abb48444d500476ff47a3e06939923fa80cc47b70d9857f38` |
+| Finanzplan-Linux-x64.deb | `cc6fa7cb202b9a1c823e264df4f3d6a6967433ca4a362cb648113013df8bf86a` |
 
 Prüfen unter Windows: `Get-FileHash <Datei>` (PowerShell) · macOS: `shasum -a 256 <Datei>` · Linux: `sha256sum <Datei>`
